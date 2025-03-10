@@ -1,0 +1,457 @@
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="pvxamjad">
+      <!-- Meta Tags for SEO -->
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="keywords" content="{{ meta_keywords }}">
+  <meta name="author" content="{{ meta_author }}">
+  <!-- Open Graph (For Social Media Sharing) -->
+  <meta property="og:title" content="{{ site_name }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card (For Twitter SEO) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site_name }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+  <meta name="twitter:site" content="{{ twitter_handle }}">
+  <title>Amjad PortFolio</title>
+  <!-- Canonical URL (Avoids Duplicate Content Issues) -->
+  <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/favicon_io/site.webmanifest' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar"  data-spy="affix" data-offset-top="20" >
+        <div class="container">
+            <a class="logo" href="/" data-aos="fade-up">
+                <img src="{% static 'assets/imgs/logo-remove.png' %}" class="img-fluid " alt="">
+            </a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <!-- <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#blog">Blog</a>
+                </li> -->
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic" >
+                <div class="hamburger-box" data-aos="fade-up">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header" >
+        <div class="overlay" data-aos="fade-up" ></div>
+        <div class="header-content container" data-aos="fade-up">
+            <h1 class="header-title" >
+                <span class="up">HI!</span>
+                <span class="down">I am Amjad</span>
+            </h1>
+            <p class="header-subtitle">Full Stack Developer</p>
+            <a href="#portfolio"><button class="btn btn-primary" data-aos="zoom-in">Visit My Works</button></a>
+                                <a href="{% static 'assets/imgs/Amjads-Resume.pdf' %}" download>
+                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    </a>
+        </div>
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder" data-aos="fade-down" >
+                    <img src="{% static 'assets/imgs/man.png' %}" class="about-img" alt="My Image">
+                </div>
+                <div class="about-caption" data-aos="fade-up" >
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        Hi, I'm Amjad, a passionate web developer with expertise in building high-quality web applications. I hold a Bachelor's degree in Computer Applications (BCA) and have earned a certification in Python Full Stack Development. </p>
+                        <p>
+
+                            In December 2024, I started working at Digicue Software Solutions, where I have been developing scalable and efficient web applications. With a strong focus on backend development and seamless user experience, I specialize in crafting dynamic and responsive websites tailored to business needs.
+                        </p>
+
+                     <p>I take pride in delivering cost-effective, high-performance websites that help businesses grow online. Whether it's a simple website or a complex web application, I ensure quality, reliability, and innovation in every project.
+                    </p>
+                    <a href="{% static 'assets/imgs/Amjads-Resume.pdf' %}" target="_blank">
+                    <button class="btn-rounded btn btn-outline-primary mt-4">View CV</button>
+                    </a>
+                    <a href="{% static 'assets/imgs/Amjads-Resume.pdf' %}" download>
+                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    </a>
+                </div>
+            </div><!-- end of about wrapper -->
+
+        </div><!-- end of container -->
+        <!-- progress bars -->
+         <div class="container">
+             <div class="row justify-content-between">
+    <div class="col-12">
+       <h3 class="components-section-title font-weight-normal mt-5">Coding Languages I Know</h3>
+       <hr>
+       <small>HTML : </small>
+       <div class="progress mt-2 mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-aos="fade-right" data-aos-duration="300" ><span>90%</span></div>
+       </div>
+       <small>CSS : </small>
+       <div class="progress mt-2 mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-aos="fade-right" data-aos-duration="1500"><span>50%</span></div>
+       </div>
+       <small>JS : </small>
+       <div class="progress mt-2 mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-aos="fade-right" data-aos-duration="1500"><span>50%</span></div>
+       </div>
+       <small>PYTHON : </small>
+       <div class="progress mt-2 mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-aos="fade-right" data-aos-duration="300"><span>90%</span></div>
+       </div>
+    </div>
+ </div>
+         </div>
+  <!-- End of Progress bars -->
+    </section> <!-- end of about section -->
+
+
+        		<!--education start -->
+		<section id="education" class="education">
+			<div class=" text-center">
+				<h2 class="components-section-title font-weight-normal mt-5">Education</h2>
+			</div>
+			<div class="container">
+				<div class="education-horizontal-timeline">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="single-horizontal-timeline">
+								<div class="experience-time">
+									<h2>2020 - 2023</h2>
+									<h3>Bachelor <span>of </span> computer science</h3>
+								</div><!--/.experience-time-->
+								<div class="timeline-horizontal-border">
+									<i class="ti-arrow-circle-right" aria-hidden="true"></i>
+									<span class="single-timeline-horizontal"></span>
+								</div>
+								<div class="timeline">
+									<div class="timeline-content">
+										<h4 class="title">
+											Calicut university
+										</h4>
+										<h5>PPTM Arts & Science College</h5>
+										<p class="description">
+											I have completed my Bachelor of Computer Applications (BCA) from Calicut University. During my studies, I gained knowledge in programming, web development, databases, and software engineering. This degree has helped me build a strong foundation in backend development and problem-solving, which I now apply in creating professional websites and eCommerce platforms. Passionate about technology and digital solutions, I continue to enhance my skills and stay updated with the latest industry trends
+										</p>
+									</div><!--/.timeline-content-->
+								</div><!--/.timeline-->
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="single-horizontal-timeline">
+								<div class="experience-time">
+									<h2>2024</h2>
+									<h3>Django Full Stack Development
+</h3>
+								</div><!--/.experience-time-->
+								<div class="timeline-horizontal-border">
+									<i class="ti-arrow-circle-right" aria-hidden="true"></i>
+									<span class="single-timeline-horizontal"></span>
+								</div>
+								<div class="timeline">
+									<div class="timeline-content">
+										<h4 class="title">
+											Zoople Technologies
+										</h4>
+										<p class="description">
+											I have completed the Django Full Stack Development program at Zoople Technologies (March 2024 – June 2024). This training covered Django, Python, frontend technologies, databases, and API development. Through hands-on projects, I gained expertise in building dynamic web applications, integrating backend logic, and optimizing performance. This program enhanced my skills in full-stack web development, allowing me to create scalable and efficient digital solutions. Excited to apply this knowledge in real-world projects
+										</p>
+									</div><!--/.timeline-content-->
+								</div><!--/.timeline-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section><!--/.education-->
+		<!--education end -->
+
+
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Service</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <div class="service-card" data-aos="zoom-in-up">
+                        <div class="body"  >
+                            <img src="{% static 'assets/imgs/web-development-svgrepo-com.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Web Development</h6>
+                            <p class="subtitle">Building fast, reliable websites using HTML, CSS, JS, Bootstrap, and Django backend.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="service-card" data-aos="zoom-in-down">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/domain-registration-svgrepo-com.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Domain & Hosting</h6>
+                            <p class="subtitle">Providing domain registration and reliable hosting services for a seamless online presence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="service-card" data-aos="zoom-in-up">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/adobe-illustrator-svgrepo-com.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Logo Design</h6>
+                            <p class="subtitle">Creating unique, professional, and memorable logo designs for brand identity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="service-card" data-aos="zoom-in-down">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/graphic-design-monitor-svgrepo-com.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Graphic Design</h6>
+                            <p class="subtitle">Providing creative and high-quality graphic design solutions for branding and marketing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center" data-aos="zoom-in" data-aos-duration="3000">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="#contact"><button class="btn btn-lg my-font btn-light rounded">Hire Me</button></a>
+
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                {% for i in data %}
+                <div class="col-md-4">
+                    <a href="{{ i.url }}" class="portfolio-card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                        <img src="{{ i.img.url }}" class="portfolio-card-img" alt="{{ i.name }}">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>{{ i.name }}</h5>
+                                <p class="font-weight-normal">Category: {% for category in i.category.all %} {{category}} {% if not forloop.last %}, {% endif %} {% endfor %}
+                                </p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                {% endfor %}
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- pricing section -->
+    <section class="section" id="pricing">
+        <div class="container text-center">
+            <!-- row -->
+            <div class="pricing-wrapper">
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="{% static 'assets/imgs/contact-svgrepo-com.svg' %}" alt="Pricing Information">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Want to Work or Know More?</h6>
+                        <div class="pricing-card-list">
+                            <p>Get details about pricing and services.</p>
+                            <p>Custom solutions tailored for you.</p>
+                            <p>Quality web design and development.</p>
+                            <p>Domain & hosting services available.</p>
+                            <p>Logo & graphic design services.</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>Contact for Pricing</span>
+                    </div>
+                    <a href="https://wa.me/917356407590" data-aos="zoom-in" data-aos-duration="3000"><img class="img-fluid" src="{% static 'assets/imgs/420096885_277459331727648_6533635286062607832_n.png' %}" alt=""></a>
+                </div>
+            </div><!-- end of pricing wrapper -->
+        </div> <!-- end of container -->
+    </section><!-- end of pricing section -->
+
+
+    <!-- testimonial section -->
+    <!-- <section class="section" id="testmonial">
+        <div class="container text-center">
+            <p class="section-subtitle">What Think Client About Me ?</p>
+            <h6 class="section-title mb-6">Testmonial</h6>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+     <!-- end of testimonial section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form method="POST" action="{% url 'contact' %}" class="contact-form col-md-10 col-lg-8 m-auto">
+                {% csrf_token %}
+                {% if messages %}
+                <div>
+                    {% for message in messages %}
+                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %} alert-dismissible fade show" role="alert">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" name="name" placeholder="Your Name" >
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6" class="form-control" placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="text" class="form-control" name="phone" placeholder="Enter Phone (optional)" >
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                    </div>
+                </div>
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.instagram.com/pvxamjad?igsh=MTB6ejdlZW0ybTQ5Yg==" class="link"data-aos="fade-down" data-aos-anchor-placement="bottom-bottom"><i class="ti-instagram me-3"></i></a>
+                <a href="https://www.linkedin.com/in/amjadxpv/" class="link" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><i class="ti-linkedin"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+	<!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- // AOS animation  -->
+    <script>
+      AOS.init();
+    </script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Amjad Portfolio",
+      "name": "{{ site_name }}",
+      "url": "{{ request.build_absolute_uri }}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.jpg' %}"
+      "description": "{{ meta_description }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{contact_number}}",
+        "contactType": "Customer Support",
+        "areaServed": "IN,UK,UAE,USA",
+        "availableLanguage": "English, Kannada, Malayalam, Hindi"
+      }
+    }
+    </script>
+
+
+</body>
+</html>
+{% endblock %}

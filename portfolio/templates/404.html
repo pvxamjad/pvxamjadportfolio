@@ -1,0 +1,136 @@
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="pvxamjad">
+      <!-- Meta Tags for SEO -->
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="keywords" content="{{ meta_keywords }}">
+  <meta name="author" content="{{ meta_author }}">
+  <!-- Open Graph (For Social Media Sharing) -->
+  <meta property="og:title" content="{{ site_name }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card (For Twitter SEO) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site_name }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+  <meta name="twitter:site" content="{{ twitter_handle }}">
+  <title>Amjad PortFolio</title>
+  <!-- Canonical URL (Avoids Duplicate Content Issues) -->
+  <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/favicon_io/favicon-32x32.png' %}"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/favicon_io/site.webmanifest' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar"  data-spy="affix" data-offset-top="20" >
+        <div class="container">
+            <a class="logo" href="/" data-aos="fade-up">
+                <img src="{% static 'assets/imgs/logo-remove.png' %}" class="img-fluid " alt="">
+            </a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <!-- <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#blog">Blog</a>
+                </li> -->
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic" >
+                <div class="hamburger-box" data-aos="fade-up">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header" >
+        <div class="overlay" data-aos="fade-up" ></div>
+        <div class="header-content container" data-aos="fade-up">
+            <h1 class="header-title" >
+                <span class="up">Oooops!</span>
+                <span class="down">Its a 404</span>
+            </h1>
+            <p class="header-subtitle">There is no such page</p>            
+            <a href="/"><button class="btn btn-primary" data-aos="zoom-in">Go to Home</button></a>
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="javascript:void(0)" class="link"data-aos="fade-down" data-aos-anchor-placement="bottom-bottom"><i class="ti-instagram me-3"></i></a>
+                <a href="javascript:void(0)" class="link" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><i class="ti-linkedin"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- // AOS animation  -->
+    <script>
+      AOS.init();
+    </script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Amjad Portfolio",
+      "name": "{{ site_name }}",
+      "url": "{{ request.build_absolute_uri }}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.jpg' %}"
+      "description": "{{ meta_description }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{contact_number}}",
+        "contactType": "Customer Support",
+        "areaServed": "IN,UK,UAE,USA",
+        "availableLanguage": "English, Kannada, Malayalam, Hindi"
+      }
+    }
+    </script>
+    
+
+</body>
+</html>
+{% endblock %}
